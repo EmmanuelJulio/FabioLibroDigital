@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MetroTabControl = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.pnl1 = new System.Windows.Forms.Panel();
@@ -51,11 +51,10 @@
             this.Edicion = new MetroFramework.Controls.MetroTabPage();
             this.metroTabControl2 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage6 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage7 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
-            this.Legajos = new System.Data.DataSet();
-            this.REC_CPO = new System.Data.DataSet();
+            this.mes = new MetroFramework.Controls.MetroTextBox();
+            this.año = new MetroFramework.Controls.MetroTextBox();
+            this.txtprueba = new System.Windows.Forms.Label();
+            this.metroButton4 = new MetroFramework.Controls.MetroButton();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -66,10 +65,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.Tbx_cuit = new MetroFramework.Controls.MetroTextBox();
-            this.metroButton4 = new MetroFramework.Controls.MetroButton();
-            this.txtprueba = new System.Windows.Forms.Label();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
+            this.metroTabPage6 = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPage7 = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+            this.Legajos = new System.Data.DataSet();
+            this.REC_CPO = new System.Data.DataSet();
             this.MetroTabControl.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.pnl1.SuspendLayout();
@@ -92,7 +92,7 @@
             this.MetroTabControl.Controls.Add(this.metroTabPage3);
             this.MetroTabControl.Location = new System.Drawing.Point(23, 63);
             this.MetroTabControl.Name = "MetroTabControl";
-            this.MetroTabControl.SelectedIndex = 1;
+            this.MetroTabControl.SelectedIndex = 0;
             this.MetroTabControl.Size = new System.Drawing.Size(1199, 560);
             this.MetroTabControl.Style = MetroFramework.MetroColorStyle.Black;
             this.MetroTabControl.TabIndex = 1;
@@ -165,33 +165,33 @@
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.CornflowerBlue;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.CornflowerBlue;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView1.ColumnHeadersHeight = 30;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -228,33 +228,33 @@
             this.dataGridView2.AllowUserToOrderColumns = true;
             this.dataGridView2.AllowUserToResizeColumns = false;
             this.dataGridView2.AllowUserToResizeRows = false;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.CornflowerBlue;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.CornflowerBlue;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridView2.ColumnHeadersHeight = 30;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridView2.EnableHeadersVisualStyles = false;
             this.dataGridView2.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dataGridView2.Location = new System.Drawing.Point(3, 3);
@@ -362,6 +362,7 @@
             this.Edicion.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Edicion.CausesValidation = false;
             this.Edicion.Controls.Add(this.metroTabControl2);
+            this.Edicion.Cursor = System.Windows.Forms.Cursors.UpArrow;
             this.Edicion.HorizontalScrollbarBarColor = true;
             this.Edicion.HorizontalScrollbarHighlightOnWheel = false;
             this.Edicion.HorizontalScrollbarSize = 10;
@@ -372,7 +373,6 @@
             this.Edicion.TabIndex = 1;
             this.Edicion.Text = "Edicion";
             this.Edicion.UseVisualStyleBackColor = true;
-            this.Edicion.UseWaitCursor = true;
             this.Edicion.VerticalScrollbarBarColor = true;
             this.Edicion.VerticalScrollbarHighlightOnWheel = false;
             this.Edicion.VerticalScrollbarSize = 10;
@@ -385,7 +385,7 @@
             this.metroTabControl2.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.metroTabControl2.Location = new System.Drawing.Point(3, 3);
             this.metroTabControl2.Name = "metroTabControl2";
-            this.metroTabControl2.SelectedIndex = 0;
+            this.metroTabControl2.SelectedIndex = 1;
             this.metroTabControl2.Size = new System.Drawing.Size(1185, 393);
             this.metroTabControl2.TabIndex = 2;
             this.metroTabControl2.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -393,8 +393,8 @@
             // 
             // metroTabPage5
             // 
-            this.metroTabPage5.Controls.Add(this.metroTextBox2);
-            this.metroTabPage5.Controls.Add(this.metroTextBox1);
+            this.metroTabPage5.Controls.Add(this.mes);
+            this.metroTabPage5.Controls.Add(this.año);
             this.metroTabPage5.Controls.Add(this.txtprueba);
             this.metroTabPage5.Controls.Add(this.metroButton4);
             this.metroTabPage5.Controls.Add(this.metroButton2);
@@ -419,6 +419,238 @@
             this.metroTabPage5.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage5.VerticalScrollbarSize = 10;
             // 
+            // mes
+            // 
+            // 
+            // 
+            // 
+            this.mes.CustomButton.Image = null;
+            this.mes.CustomButton.Location = new System.Drawing.Point(46, 1);
+            this.mes.CustomButton.Name = "";
+            this.mes.CustomButton.Size = new System.Drawing.Size(19, 19);
+            this.mes.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.mes.CustomButton.TabIndex = 1;
+            this.mes.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.mes.CustomButton.UseSelectable = true;
+            this.mes.CustomButton.Visible = false;
+            this.mes.Lines = new string[0];
+            this.mes.Location = new System.Drawing.Point(247, 82);
+            this.mes.MaxLength = 32767;
+            this.mes.Name = "mes";
+            this.mes.PasswordChar = '\0';
+            this.mes.PromptText = "Mes";
+            this.mes.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.mes.SelectedText = "";
+            this.mes.SelectionLength = 0;
+            this.mes.SelectionStart = 0;
+            this.mes.ShortcutsEnabled = true;
+            this.mes.Size = new System.Drawing.Size(66, 21);
+            this.mes.TabIndex = 52;
+            this.mes.UseSelectable = true;
+            this.mes.WaterMark = "Mes";
+            this.mes.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.mes.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // año
+            // 
+            // 
+            // 
+            // 
+            this.año.CustomButton.Image = null;
+            this.año.CustomButton.Location = new System.Drawing.Point(108, 1);
+            this.año.CustomButton.Name = "";
+            this.año.CustomButton.Size = new System.Drawing.Size(19, 19);
+            this.año.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.año.CustomButton.TabIndex = 1;
+            this.año.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.año.CustomButton.UseSelectable = true;
+            this.año.CustomButton.Visible = false;
+            this.año.Lines = new string[0];
+            this.año.Location = new System.Drawing.Point(319, 82);
+            this.año.MaxLength = 32767;
+            this.año.Name = "año";
+            this.año.PasswordChar = '\0';
+            this.año.PromptText = "Año";
+            this.año.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.año.SelectedText = "";
+            this.año.SelectionLength = 0;
+            this.año.SelectionStart = 0;
+            this.año.ShortcutsEnabled = true;
+            this.año.Size = new System.Drawing.Size(128, 21);
+            this.año.TabIndex = 51;
+            this.año.UseSelectable = true;
+            this.año.WaterMark = "Año";
+            this.año.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.año.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // txtprueba
+            // 
+            this.txtprueba.AutoSize = true;
+            this.txtprueba.BackColor = System.Drawing.Color.White;
+            this.txtprueba.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtprueba.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.txtprueba.Location = new System.Drawing.Point(492, 107);
+            this.txtprueba.Name = "txtprueba";
+            this.txtprueba.Size = new System.Drawing.Size(181, 20);
+            this.txtprueba.TabIndex = 50;
+            this.txtprueba.Text = "Identificacion de envio";
+            // 
+            // metroButton4
+            // 
+            this.metroButton4.Location = new System.Drawing.Point(496, 133);
+            this.metroButton4.Name = "metroButton4";
+            this.metroButton4.Size = new System.Drawing.Size(146, 25);
+            this.metroButton4.TabIndex = 49;
+            this.metroButton4.Text = "Probar Registro1";
+            this.metroButton4.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroButton4.UseSelectable = true;
+            this.metroButton4.Click += new System.EventHandler(this.MetroButton4_Click);
+            // 
+            // metroButton2
+            // 
+            this.metroButton2.Location = new System.Drawing.Point(496, 164);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(146, 25);
+            this.metroButton2.TabIndex = 48;
+            this.metroButton2.Text = "Avanzar a Registro 2";
+            this.metroButton2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroButton2.UseSelectable = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.White;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label6.Location = new System.Drawing.Point(30, 137);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(179, 20);
+            this.label6.TabIndex = 46;
+            this.label6.Text = "Numero de Liquidacion";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11"});
+            this.comboBox3.Location = new System.Drawing.Point(247, 136);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(200, 21);
+            this.comboBox3.TabIndex = 44;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Mensual",
+            "Quincenal",
+            "Semanal"});
+            this.comboBox2.Location = new System.Drawing.Point(247, 109);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(200, 21);
+            this.comboBox2.TabIndex = 43;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label5.Location = new System.Drawing.Point(30, 109);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(149, 20);
+            this.label5.TabIndex = 42;
+            this.label5.Text = "Tipo de Liquidacion";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label4.Location = new System.Drawing.Point(30, 80);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(66, 20);
+            this.label4.TabIndex = 41;
+            this.label4.Text = "Periodo";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label3.Location = new System.Drawing.Point(30, 51);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(181, 20);
+            this.label3.TabIndex = 40;
+            this.label3.Text = "Identificacion de envio";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label2.Location = new System.Drawing.Point(30, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 20);
+            this.label2.TabIndex = 39;
+            this.label2.Text = "Cuit";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "SJ",
+            "RE"});
+            this.comboBox1.Location = new System.Drawing.Point(247, 53);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(200, 21);
+            this.comboBox1.TabIndex = 37;
+            // 
+            // Tbx_cuit
+            // 
+            // 
+            // 
+            // 
+            this.Tbx_cuit.CustomButton.Image = null;
+            this.Tbx_cuit.CustomButton.Location = new System.Drawing.Point(180, 1);
+            this.Tbx_cuit.CustomButton.Name = "";
+            this.Tbx_cuit.CustomButton.Size = new System.Drawing.Size(19, 19);
+            this.Tbx_cuit.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Tbx_cuit.CustomButton.TabIndex = 1;
+            this.Tbx_cuit.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Tbx_cuit.CustomButton.UseSelectable = true;
+            this.Tbx_cuit.CustomButton.Visible = false;
+            this.Tbx_cuit.Lines = new string[0];
+            this.Tbx_cuit.Location = new System.Drawing.Point(247, 26);
+            this.Tbx_cuit.MaxLength = 32767;
+            this.Tbx_cuit.Name = "Tbx_cuit";
+            this.Tbx_cuit.PasswordChar = '\0';
+            this.Tbx_cuit.PromptText = "Cuit";
+            this.Tbx_cuit.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Tbx_cuit.SelectedText = "";
+            this.Tbx_cuit.SelectionLength = 0;
+            this.Tbx_cuit.SelectionStart = 0;
+            this.Tbx_cuit.ShortcutsEnabled = true;
+            this.Tbx_cuit.Size = new System.Drawing.Size(200, 21);
+            this.Tbx_cuit.TabIndex = 36;
+            this.Tbx_cuit.UseSelectable = true;
+            this.Tbx_cuit.WaterMark = "Cuit";
+            this.Tbx_cuit.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Tbx_cuit.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // metroTabPage6
             // 
             this.metroTabPage6.HorizontalScrollbarBarColor = true;
@@ -426,7 +658,7 @@
             this.metroTabPage6.HorizontalScrollbarSize = 10;
             this.metroTabPage6.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage6.Name = "metroTabPage6";
-            this.metroTabPage6.Size = new System.Drawing.Size(491, 246);
+            this.metroTabPage6.Size = new System.Drawing.Size(1177, 351);
             this.metroTabPage6.TabIndex = 1;
             this.metroTabPage6.Text = "Registro 2";
             this.metroTabPage6.VerticalScrollbarBarColor = true;
@@ -468,246 +700,6 @@
             // REC_CPO
             // 
             this.REC_CPO.DataSetName = "NewDataSet";
-            // 
-            // metroButton2
-            // 
-            this.metroButton2.Location = new System.Drawing.Point(496, 164);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(146, 25);
-            this.metroButton2.TabIndex = 48;
-            this.metroButton2.Text = "Avanzar a Registro 2";
-            this.metroButton2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroButton2.UseSelectable = true;
-            this.metroButton2.UseWaitCursor = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.White;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label6.Location = new System.Drawing.Point(30, 137);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(179, 20);
-            this.label6.TabIndex = 46;
-            this.label6.Text = "Numero de Liquidacion";
-            this.label6.UseWaitCursor = true;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "SJ",
-            "RE"});
-            this.comboBox3.Location = new System.Drawing.Point(247, 136);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(200, 21);
-            this.comboBox3.TabIndex = 44;
-            this.comboBox3.UseWaitCursor = true;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Mensual",
-            "Quincenal",
-            "Semanal"});
-            this.comboBox2.Location = new System.Drawing.Point(247, 109);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(200, 21);
-            this.comboBox2.TabIndex = 43;
-            this.comboBox2.UseWaitCursor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label5.Location = new System.Drawing.Point(30, 109);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(149, 20);
-            this.label5.TabIndex = 42;
-            this.label5.Text = "Tipo de Liquidacion";
-            this.label5.UseWaitCursor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label4.Location = new System.Drawing.Point(30, 80);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 20);
-            this.label4.TabIndex = 41;
-            this.label4.Text = "Periodo";
-            this.label4.UseWaitCursor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label3.Location = new System.Drawing.Point(30, 51);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(181, 20);
-            this.label3.TabIndex = 40;
-            this.label3.Text = "Identificacion de envio";
-            this.label3.UseWaitCursor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(30, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 20);
-            this.label2.TabIndex = 39;
-            this.label2.Text = "Cuit";
-            this.label2.UseWaitCursor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "SJ",
-            "RE"});
-            this.comboBox1.Location = new System.Drawing.Point(247, 53);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 21);
-            this.comboBox1.TabIndex = 37;
-            this.comboBox1.UseWaitCursor = true;
-            // 
-            // Tbx_cuit
-            // 
-            // 
-            // 
-            // 
-            this.Tbx_cuit.CustomButton.Image = null;
-            this.Tbx_cuit.CustomButton.Location = new System.Drawing.Point(180, 1);
-            this.Tbx_cuit.CustomButton.Name = "";
-            this.Tbx_cuit.CustomButton.Size = new System.Drawing.Size(19, 19);
-            this.Tbx_cuit.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.Tbx_cuit.CustomButton.TabIndex = 1;
-            this.Tbx_cuit.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.Tbx_cuit.CustomButton.UseSelectable = true;
-            this.Tbx_cuit.CustomButton.UseWaitCursor = true;
-            this.Tbx_cuit.CustomButton.Visible = false;
-            this.Tbx_cuit.Lines = new string[] {
-        "Cuit"};
-            this.Tbx_cuit.Location = new System.Drawing.Point(247, 26);
-            this.Tbx_cuit.MaxLength = 32767;
-            this.Tbx_cuit.Name = "Tbx_cuit";
-            this.Tbx_cuit.PasswordChar = '\0';
-            this.Tbx_cuit.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.Tbx_cuit.SelectedText = "";
-            this.Tbx_cuit.SelectionLength = 0;
-            this.Tbx_cuit.SelectionStart = 0;
-            this.Tbx_cuit.ShortcutsEnabled = true;
-            this.Tbx_cuit.Size = new System.Drawing.Size(200, 21);
-            this.Tbx_cuit.TabIndex = 36;
-            this.Tbx_cuit.Text = "Cuit";
-            this.Tbx_cuit.UseSelectable = true;
-            this.Tbx_cuit.UseWaitCursor = true;
-            this.Tbx_cuit.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Tbx_cuit.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroButton4
-            // 
-            this.metroButton4.Location = new System.Drawing.Point(496, 133);
-            this.metroButton4.Name = "metroButton4";
-            this.metroButton4.Size = new System.Drawing.Size(146, 25);
-            this.metroButton4.TabIndex = 49;
-            this.metroButton4.Text = "Probar Registro1";
-            this.metroButton4.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroButton4.UseSelectable = true;
-            this.metroButton4.UseWaitCursor = true;
-            this.metroButton4.Click += new System.EventHandler(this.MetroButton4_Click);
-            // 
-            // txtprueba
-            // 
-            this.txtprueba.AutoSize = true;
-            this.txtprueba.BackColor = System.Drawing.Color.White;
-            this.txtprueba.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtprueba.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.txtprueba.Location = new System.Drawing.Point(492, 107);
-            this.txtprueba.Name = "txtprueba";
-            this.txtprueba.Size = new System.Drawing.Size(181, 20);
-            this.txtprueba.TabIndex = 50;
-            this.txtprueba.Text = "Identificacion de envio";
-            this.txtprueba.UseWaitCursor = true;
-            // 
-            // metroTextBox1
-            // 
-            // 
-            // 
-            // 
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(108, 1);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(19, 19);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.CustomButton.UseWaitCursor = true;
-            this.metroTextBox1.CustomButton.Visible = false;
-            this.metroTextBox1.Lines = new string[] {
-        "Cuit"};
-            this.metroTextBox1.Location = new System.Drawing.Point(319, 82);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(128, 21);
-            this.metroTextBox1.TabIndex = 51;
-            this.metroTextBox1.Text = "Cuit";
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.UseWaitCursor = true;
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroTextBox2
-            // 
-            // 
-            // 
-            // 
-            this.metroTextBox2.CustomButton.Image = null;
-            this.metroTextBox2.CustomButton.Location = new System.Drawing.Point(46, 1);
-            this.metroTextBox2.CustomButton.Name = "";
-            this.metroTextBox2.CustomButton.Size = new System.Drawing.Size(19, 19);
-            this.metroTextBox2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox2.CustomButton.TabIndex = 1;
-            this.metroTextBox2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox2.CustomButton.UseSelectable = true;
-            this.metroTextBox2.CustomButton.UseWaitCursor = true;
-            this.metroTextBox2.CustomButton.Visible = false;
-            this.metroTextBox2.Lines = new string[] {
-        "Cuit"};
-            this.metroTextBox2.Location = new System.Drawing.Point(247, 82);
-            this.metroTextBox2.MaxLength = 32767;
-            this.metroTextBox2.Name = "metroTextBox2";
-            this.metroTextBox2.PasswordChar = '\0';
-            this.metroTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox2.SelectedText = "";
-            this.metroTextBox2.SelectionLength = 0;
-            this.metroTextBox2.SelectionStart = 0;
-            this.metroTextBox2.ShortcutsEnabled = true;
-            this.metroTextBox2.Size = new System.Drawing.Size(66, 21);
-            this.metroTextBox2.TabIndex = 52;
-            this.metroTextBox2.Text = "Cuit";
-            this.metroTextBox2.UseSelectable = true;
-            this.metroTextBox2.UseWaitCursor = true;
-            this.metroTextBox2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // Form1
             // 
@@ -774,8 +766,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox1;
         private MetroFramework.Controls.MetroTextBox Tbx_cuit;
-        private MetroFramework.Controls.MetroTextBox metroTextBox2;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroTextBox mes;
+        private MetroFramework.Controls.MetroTextBox año;
     }
 }
 

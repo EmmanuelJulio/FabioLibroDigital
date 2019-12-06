@@ -14,7 +14,7 @@ namespace LibroDeSueldosDigital
         int IdentificadorDeRegistro = 01;//2
         int Cuit;//11
         string IdentificadorDeEnvio;//2
-        int Periodo;//6
+        string Periodo;//6
         string TipoDeLiquidacion;//1
         int NumeroDeLiquidacion;//1
         int DiasBase = 30;//2
@@ -34,7 +34,7 @@ namespace LibroDeSueldosDigital
     public int Cuit1 { get => Cuit;
             set => Cuit = value; }
         public string IdentificadorDeEnvio1 { get => IdentificadorDeEnvio2; set => IdentificadorDeEnvio2 = value; }
-        public int Periodo1 { get => Periodo; set => Periodo = value; }
+        public string Periodo1 { get => Periodo; set => Periodo = value; }
         public string TipoDeLiquidacion1
             {
             get
