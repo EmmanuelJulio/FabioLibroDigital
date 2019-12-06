@@ -126,8 +126,8 @@ namespace LibroDeSueldosDigital
         {
             MetroTabControl.SelectedTab = MetroTabControl.TabPages[1];
             DataTable _legajos = Legajos.Tables["legajos"];
-            dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.CustomFormat = "yyyyMM";
+            //dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            //dateTimePicker1.CustomFormat = "yyyyMM";
 
         }
         
@@ -135,6 +135,18 @@ namespace LibroDeSueldosDigital
         private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void MetroButton4_Click(object sender, EventArgs e)
+        {
+            Registro1 Reg = new Registro1();
+            Reg.Cuit1 = Convert.ToInt32(Tbx_cuit.Text);
+            Reg.IdentificadorDeEnvio1 = comboBox1.SelectedItem.ToString();
+            Reg.Periodo1 = Convert.ToInt32(dateTimePicker1.Text);
+            Reg.TipoDeLiquidacion1 = comboBox2.SelectedItem.ToString();
+            Reg.NumeroDeLiquidacion1 = Convert.ToInt32(comboBox3.SelectedItem.ToString());
+            Reg.Crear();
+            txtprueba.Text = Reg.Cadena2;
         }
     }
 }
