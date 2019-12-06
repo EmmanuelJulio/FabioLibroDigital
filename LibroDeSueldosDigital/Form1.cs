@@ -54,47 +54,35 @@ namespace LibroDeSueldosDigital
             }
         }
 
-        private void MetroButton2_Click(object sender, EventArgs e)
-        {
-            FolderBrowserDialog Rec_cpo = new FolderBrowserDialog();
-            //si la carpeta fue elegida
-            if (Rec_cpo.ShowDialog() == DialogResult.OK)
-            {
-                //carpeta seleccionada
-                CarpetaBusquedaREC = Rec_cpo.SelectedPath;
-                TBREC_CPO.Text = CarpetaBusquedaREC;
-               
-                MetroFramework.MetroMessageBox.Show(this, "Seleccionado", "Informacion",MessageBoxButtons.OK);
-            }
-        }
+        
 
         private void MetroButton3_Click(object sender, EventArgs e)
         {
             try
             {
-                pnl1.Visible = false;
+                
                 //legajos
                 string cadena = "Provider=Microsoft.Jet.OLEDB.4.0"+"; Data Source ="+ CarpetaBusquedaLeg + ";Extended Properties=dBASE IV; User ID=;Password=;";
                 OleDbConnection con = new OleDbConnection();
                 con.ConnectionString = cadena;
                 con.Open();
-                string consulta = "select * from legajos";
+                string consulta = "select * from legajos order by legajo ";
                 OleDbDataAdapter adapter = new OleDbDataAdapter(consulta, con);
-                DataSet ds = new DataSet();
-                adapter.Fill(ds);
+                //DataSet ds = new DataSet();
+                adapter.Fill(Legajos);
                 con.Close();
-                this.dataGridView1.DataSource = ds.Tables[0];
+                dataGridView1.DataSource = Legajos.Tables[0];
                 //Rec_cpo
-                string cadena2 = "Provider=Microsoft.Jet.OLEDB.4.0" + "; Data Source =" + CarpetaBusquedaREC + ";Extended Properties=dBASE IV; User ID=;Password=;";
+                string cadena2 = "Provider=Microsoft.Jet.OLEDB.4.0" + "; Data Source =" + CarpetaBusquedaLeg + ";Extended Properties=dBASE IV; User ID=;Password=;";
                 OleDbConnection con2 = new OleDbConnection();
                 con.ConnectionString = cadena;
                 con.Open();
-                string consulta2 = "select * from REC_CPO";
-                OleDbDataAdapter adapter2 = new OleDbDataAdapter(consulta, con);
-                DataSet ds2 = new DataSet();
-                adapter.Fill(ds2);
+                string consulta2 = "select * from REC_CPO order by legajo ";
+                OleDbDataAdapter adapter2 = new OleDbDataAdapter(consulta2, con);
+                //DataSet ds2 = new DataSet();
+                adapter2.Fill(REC_CPO);
                 con.Close();
-                this.dataGridView2.DataSource = ds2.Tables[0];
+                dataGridView2.DataSource = REC_CPO.Tables[0];
 
                 metroTabControl1.Visible = true;
                 salirverif.Visible = true;
@@ -115,6 +103,38 @@ namespace LibroDeSueldosDigital
             //{
             //    if(Letra.)
             //}
+        }
+
+        private void Salirverif_Click(object sender, EventArgs e)
+        {
+            metroTabControl1.Visible = false;
+            TBlegajos.Text = "";
+            pnl1.Visible = true;
+        }
+
+        private void TBlegajos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NextStep1_Click(object sender, EventArgs e)
+        {
+            MetroTabControl.SelectedTab = MetroTabControl.TabPages[1];
+            DataTable _legajos = Legajos.Tables["legajos"];
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker1.CustomFormat = "yyyyMM";
+
+        }
+        
+
+        private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
