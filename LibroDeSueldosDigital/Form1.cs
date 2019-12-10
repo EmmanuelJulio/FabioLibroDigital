@@ -183,8 +183,7 @@ namespace LibroDeSueldosDigital
             try
             {
                 Registro1 Reg = new Registro1(Tbx_cuit.Text, comboBox1.SelectedItem.ToString(), año.Text + mes.Text, comboBox2.SelectedItem.ToString(), comboBox3.SelectedItem.ToString());
-                txtprueba.Text = Reg.VerCadena();
-                Control.Text = txtprueba.Text.Length.ToString();
+             
             }
             catch (Exception er)
             {
@@ -387,7 +386,7 @@ namespace LibroDeSueldosDigital
                             Concepto = legajos[3],
                             Detalle = legajos[4],
                             Unidad = legajos[5],
-                            Valor = Math.Abs((int)legajos[6]),
+                            Valor = legajos[6],
                             Remuneracion = legajos[7]
                         };
             foreach (var leg in query)
@@ -398,6 +397,14 @@ namespace LibroDeSueldosDigital
                 direccion_txt.Text = leg.dire.ToString();
                 Ocupacion_txt.Text = leg.Categoria.ToString();
             }
+            //int fila = 1;
+            //int columna = 0;
+            //foreach (var concepto in query2)
+            //{
+            //    dataGridView3.Rows.Add();
+            //    dataGridView3.
+            //}
+
             dataGridView3.DataSource = query2.ToList();
         }
         private void ComboBox7_SelectedIndexChanged(object sender, EventArgs e)

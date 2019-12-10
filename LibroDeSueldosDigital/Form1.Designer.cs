@@ -36,7 +36,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.MetroTabControl = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
@@ -56,11 +58,8 @@
             this.metroTabControl2 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
             this.metroButton9 = new MetroFramework.Controls.MetroButton();
-            this.Control = new System.Windows.Forms.Label();
             this.mes = new MetroFramework.Controls.MetroTextBox();
             this.año = new MetroFramework.Controls.MetroTextBox();
-            this.txtprueba = new System.Windows.Forms.Label();
-            this.metroButton4 = new MetroFramework.Controls.MetroButton();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -72,6 +71,11 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.Tbx_cuit = new MetroFramework.Controls.MetroTextBox();
             this.metroTabPage6 = new MetroFramework.Controls.MetroTabPage();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.metroDateTime2 = new MetroFramework.Controls.MetroDateTime();
+            this.label13 = new System.Windows.Forms.Label();
+            this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
             this.metroButton7 = new MetroFramework.Controls.MetroButton();
             this.label10 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
@@ -96,11 +100,8 @@
             this.TXT_Final = new System.Windows.Forms.TextBox();
             this.Legajos = new System.Data.DataSet();
             this.REC_CPO = new System.Data.DataSet();
-            this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.metroDateTime2 = new MetroFramework.Controls.MetroDateTime();
-            this.label15 = new System.Windows.Forms.Label();
+            this.Unidades = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.DebitoCredito = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.MetroTabControl.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.pnl1.SuspendLayout();
@@ -429,11 +430,8 @@
             // metroTabPage5
             // 
             this.metroTabPage5.Controls.Add(this.metroButton9);
-            this.metroTabPage5.Controls.Add(this.Control);
             this.metroTabPage5.Controls.Add(this.mes);
             this.metroTabPage5.Controls.Add(this.año);
-            this.metroTabPage5.Controls.Add(this.txtprueba);
-            this.metroTabPage5.Controls.Add(this.metroButton4);
             this.metroTabPage5.Controls.Add(this.metroButton2);
             this.metroTabPage5.Controls.Add(this.label6);
             this.metroTabPage5.Controls.Add(this.comboBox3);
@@ -466,18 +464,6 @@
             this.metroButton9.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroButton9.UseSelectable = true;
             this.metroButton9.Click += new System.EventHandler(this.MetroButton9_Click);
-            // 
-            // Control
-            // 
-            this.Control.AutoSize = true;
-            this.Control.BackColor = System.Drawing.Color.White;
-            this.Control.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Control.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Control.Location = new System.Drawing.Point(467, 237);
-            this.Control.Name = "Control";
-            this.Control.Size = new System.Drawing.Size(481, 30);
-            this.Control.TabIndex = 51;
-            this.Control.Text = "Probar codigo saliente de esta cagada";
             // 
             // mes
             // 
@@ -545,34 +531,11 @@
             this.año.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.año.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Año_KeyPress);
             // 
-            // txtprueba
-            // 
-            this.txtprueba.AutoSize = true;
-            this.txtprueba.BackColor = System.Drawing.Color.White;
-            this.txtprueba.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtprueba.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.txtprueba.Location = new System.Drawing.Point(467, 207);
-            this.txtprueba.Name = "txtprueba";
-            this.txtprueba.Size = new System.Drawing.Size(481, 30);
-            this.txtprueba.TabIndex = 50;
-            this.txtprueba.Text = "Probar codigo saliente de esta cagada";
-            // 
-            // metroButton4
-            // 
-            this.metroButton4.Location = new System.Drawing.Point(624, 308);
-            this.metroButton4.Name = "metroButton4";
-            this.metroButton4.Size = new System.Drawing.Size(146, 25);
-            this.metroButton4.TabIndex = 42;
-            this.metroButton4.Text = "Probar Registro1";
-            this.metroButton4.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroButton4.UseSelectable = true;
-            this.metroButton4.Click += new System.EventHandler(this.MetroButton4_Click);
-            // 
             // metroButton2
             // 
-            this.metroButton2.Location = new System.Drawing.Point(630, 113);
+            this.metroButton2.Location = new System.Drawing.Point(405, 210);
             this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(146, 25);
+            this.metroButton2.Size = new System.Drawing.Size(220, 79);
             this.metroButton2.TabIndex = 43;
             this.metroButton2.Text = "Avanzar a Registro 2";
             this.metroButton2.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -743,6 +706,70 @@
             this.metroTabPage6.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage6.VerticalScrollbarSize = 10;
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.White;
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label15.Location = new System.Drawing.Point(678, 434);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(140, 20);
+            this.label15.TabIndex = 69;
+            this.label15.Text = "Fecha De Rubrica";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.White;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label14.Location = new System.Drawing.Point(245, 39);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(140, 20);
+            this.label14.TabIndex = 68;
+            this.label14.Text = "Fecha De Rubrica";
+            this.label14.Click += new System.EventHandler(this.Label14_Click);
+            // 
+            // metroDateTime2
+            // 
+            this.metroDateTime2.CustomFormat = "AAAAMMDD";
+            this.metroDateTime2.FontSize = MetroFramework.MetroDateTimeSize.Small;
+            this.metroDateTime2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.metroDateTime2.Location = new System.Drawing.Point(391, 39);
+            this.metroDateTime2.MinimumSize = new System.Drawing.Size(0, 25);
+            this.metroDateTime2.Name = "metroDateTime2";
+            this.metroDateTime2.Size = new System.Drawing.Size(106, 25);
+            this.metroDateTime2.Style = MetroFramework.MetroColorStyle.Black;
+            this.metroDateTime2.TabIndex = 67;
+            this.metroDateTime2.Value = new System.DateTime(2019, 12, 10, 0, 0, 0, 0);
+            this.metroDateTime2.ValueChanged += new System.EventHandler(this.MetroDateTime2_ValueChanged);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.White;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label13.Location = new System.Drawing.Point(3, 39);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(124, 20);
+            this.label13.TabIndex = 66;
+            this.label13.Text = "Fecha De pago";
+            // 
+            // metroDateTime1
+            // 
+            this.metroDateTime1.CustomFormat = "AAAAMMDD";
+            this.metroDateTime1.FontSize = MetroFramework.MetroDateTimeSize.Small;
+            this.metroDateTime1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.metroDateTime1.Location = new System.Drawing.Point(133, 36);
+            this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 25);
+            this.metroDateTime1.Name = "metroDateTime1";
+            this.metroDateTime1.Size = new System.Drawing.Size(106, 25);
+            this.metroDateTime1.Style = MetroFramework.MetroColorStyle.Black;
+            this.metroDateTime1.TabIndex = 65;
+            this.metroDateTime1.Value = new System.DateTime(2019, 12, 10, 0, 0, 0, 0);
+            // 
             // metroButton7
             // 
             this.metroButton7.Location = new System.Drawing.Point(442, 425);
@@ -804,25 +831,28 @@
             this.dataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView3.ColumnHeadersHeight = 30;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView3.DefaultCellStyle = dataGridViewCellStyle9;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Unidades,
+            this.DebitoCredito});
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView3.DefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridView3.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
             this.dataGridView3.EnableHeadersVisualStyles = false;
             this.dataGridView3.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dataGridView3.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.dataGridView3.Location = new System.Drawing.Point(3, 101);
+            this.dataGridView3.Location = new System.Drawing.Point(7, 101);
             this.dataGridView3.MultiSelect = false;
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersVisible = false;
             this.dataGridView3.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView3.Size = new System.Drawing.Size(1171, 318);
+            this.dataGridView3.Size = new System.Drawing.Size(1167, 318);
             this.dataGridView3.TabIndex = 61;
             // 
             // label12
@@ -1060,69 +1090,40 @@
             // 
             this.REC_CPO.DataSetName = "NewDataSet";
             // 
-            // metroDateTime1
+            // Unidades
             // 
-            this.metroDateTime1.CustomFormat = "AAAAMMDD";
-            this.metroDateTime1.FontSize = MetroFramework.MetroDateTimeSize.Small;
-            this.metroDateTime1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.metroDateTime1.Location = new System.Drawing.Point(133, 36);
-            this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 25);
-            this.metroDateTime1.Name = "metroDateTime1";
-            this.metroDateTime1.Size = new System.Drawing.Size(106, 25);
-            this.metroDateTime1.Style = MetroFramework.MetroColorStyle.Black;
-            this.metroDateTime1.TabIndex = 65;
-            this.metroDateTime1.Value = new System.DateTime(2019, 12, 10, 0, 0, 0, 0);
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.LightGray;
+            this.Unidades.DefaultCellStyle = dataGridViewCellStyle9;
+            this.Unidades.Frozen = true;
+            this.Unidades.HeaderText = "Unidades";
+            this.Unidades.Items.AddRange(new object[] {
+            "Moneda",
+            "Porcentuales",
+            "Año",
+            "Quincena",
+            "Mes",
+            "Semanas",
+            "Dias",
+            "Horas"});
+            this.Unidades.Name = "Unidades";
+            this.Unidades.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Unidades.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // label13
+            // DebitoCredito
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.White;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label13.Location = new System.Drawing.Point(3, 39);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(124, 20);
-            this.label13.TabIndex = 66;
-            this.label13.Text = "Fecha De pago";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.White;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label14.Location = new System.Drawing.Point(245, 39);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(140, 20);
-            this.label14.TabIndex = 68;
-            this.label14.Text = "Fecha De Rubrica";
-            this.label14.Click += new System.EventHandler(this.Label14_Click);
-            // 
-            // metroDateTime2
-            // 
-            this.metroDateTime2.CustomFormat = "AAAAMMDD";
-            this.metroDateTime2.FontSize = MetroFramework.MetroDateTimeSize.Small;
-            this.metroDateTime2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.metroDateTime2.Location = new System.Drawing.Point(391, 39);
-            this.metroDateTime2.MinimumSize = new System.Drawing.Size(0, 25);
-            this.metroDateTime2.Name = "metroDateTime2";
-            this.metroDateTime2.Size = new System.Drawing.Size(106, 25);
-            this.metroDateTime2.Style = MetroFramework.MetroColorStyle.Black;
-            this.metroDateTime2.TabIndex = 67;
-            this.metroDateTime2.Value = new System.DateTime(2019, 12, 10, 0, 0, 0, 0);
-            this.metroDateTime2.ValueChanged += new System.EventHandler(this.MetroDateTime2_ValueChanged);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.White;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label15.Location = new System.Drawing.Point(678, 434);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(140, 20);
-            this.label15.TabIndex = 69;
-            this.label15.Text = "Fecha De Rubrica";
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            this.DebitoCredito.DefaultCellStyle = dataGridViewCellStyle10;
+            this.DebitoCredito.HeaderText = "Debito o Credito";
+            this.DebitoCredito.Items.AddRange(new object[] {
+            "Debito",
+            "Credito"});
+            this.DebitoCredito.Name = "DebitoCredito";
+            this.DebitoCredito.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // Form1
             // 
@@ -1185,8 +1186,6 @@
         private MetroFramework.Controls.MetroTabPage metroTabPage5;
         private MetroFramework.Controls.MetroTabPage metroTabPage6;
         private MetroFramework.Controls.MetroTabPage metroTabPage7;
-        private System.Windows.Forms.Label txtprueba;
-        private MetroFramework.Controls.MetroButton metroButton4;
         private MetroFramework.Controls.MetroButton metroButton2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBox3;
@@ -1199,7 +1198,6 @@
         private MetroFramework.Controls.MetroTextBox Tbx_cuit;
         private MetroFramework.Controls.MetroTextBox mes;
         private MetroFramework.Controls.MetroTextBox año;
-        private System.Windows.Forms.Label Control;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
@@ -1226,6 +1224,8 @@
         private MetroFramework.Controls.MetroDateTime metroDateTime2;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Unidades;
+        private System.Windows.Forms.DataGridViewComboBoxColumn DebitoCredito;
     }
 }
 
