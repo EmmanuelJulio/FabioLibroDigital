@@ -19,7 +19,7 @@ namespace LibroDeSueldosDigital
         string NumeroDeLiquidacion;//1
         int DiasBase = 30;//2
         int CantidadRegistros04=190;//6
-        public Registro1(string _cuit,string _identificadorDeEnvio,string _periodo,string _tipoLiquidacion,int _NumeroLiquidacion)
+        public Registro1(string _cuit,string _identificadorDeEnvio,string _periodo,string _tipoLiquidacion,string _NumeroLiquidacion)
         {
             this.Cuit = _cuit;
             this.IdentificadorDeEnvio = _identificadorDeEnvio;
@@ -38,6 +38,7 @@ namespace LibroDeSueldosDigital
 
             }
             this.Cadena1 = this.VerCadena();
+            this.NumeroDeLiquidacion = _NumeroLiquidacion;
 
 
         }
@@ -47,8 +48,14 @@ namespace LibroDeSueldosDigital
         //  
         public string VerCadena()
         {
-            //this.NumeroDeLiquidacion = String.Format("{0:00000000000}", _NumeroLiquidacion.ToString());
-            String cade = string.Format("{0:00}",this.IdentificadorDeRegistro.ToString()) + this.Cuit + this.IdentificadorDeEnvio + this.Periodo + this.TipoDeLiquidacion + this.NumeroDeLiquidacion + this.DiasBase + this.CantidadRegistros04;
+            ///string format solo fuinciona cuando el campo value es un int o un puto float
+            ///lrpmt como hago con los campos de texto??????????
+            ///
+            long cuit2 = Convert.ToInt64(Cuit);
+            int cod3 = CantidadRegistros04;
+            int Numliq = Convert.ToInt32(NumeroDeLiquidacion);
+            string codigo2 = string.Format("{0:000000}", CantidadRegistros04);
+            String cade = string.Format("{0:00}",this.IdentificadorDeRegistro) + string.Format("{0:00000000000}", cuit2) + this.IdentificadorDeEnvio + this.Periodo + this.TipoDeLiquidacion + string.Format("{0:00000}", Numliq) + this.DiasBase +  codigo2;
             return cade;
         }
 

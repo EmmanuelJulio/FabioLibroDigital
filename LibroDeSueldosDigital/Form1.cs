@@ -166,6 +166,7 @@ namespace LibroDeSueldosDigital
         {
             MetroTabControl.SelectedTab = MetroTabControl.TabPages[1];
             DataTable _legajos = Legajos.Tables["legajos"];
+            metroTabControl2.SelectedTab = metroTabControl2.TabPages[0];
             //dateTimePicker1.Format = DateTimePickerFormat.Custom;
             //dateTimePicker1.CustomFormat = "yyyyMM";
 
@@ -179,9 +180,17 @@ namespace LibroDeSueldosDigital
 
         private void MetroButton4_Click(object sender, EventArgs e)
         {
-            Registro1 Reg = new Registro1(Tbx_cuit.Text, comboBox1.SelectedItem.ToString(),año.Text+mes.Text, comboBox2.SelectedItem.ToString(),Convert.ToInt32(comboBox3.SelectedItem));
-            txtprueba.Text = Reg.VerCadena();
-            Control.Text = txtprueba.Text.Length.ToString();
+            try
+            {
+                Registro1 Reg = new Registro1(Tbx_cuit.Text, comboBox1.SelectedItem.ToString(), año.Text + mes.Text, comboBox2.SelectedItem.ToString(), comboBox3.SelectedItem.ToString());
+                txtprueba.Text = Reg.VerCadena();
+                Control.Text = txtprueba.Text.Length.ToString();
+            }
+            catch (Exception er)
+            {
+
+               MetroFramework.MetroMessageBox.Show(this,"Recuerde completar todos los campos ,Error:"+ er.Message);
+            }
            
         }
         public void SoloLetras(KeyPressEventArgs e)
@@ -284,9 +293,19 @@ namespace LibroDeSueldosDigital
 
         private void MetroButton2_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Registro1 Reg = new Registro1(Tbx_cuit.Text, comboBox1.SelectedItem.ToString(), año.Text + mes.Text, comboBox2.SelectedItem.ToString(), comboBox3.SelectedItem.ToString());
+                TXT_Final.Text += Reg.VerCadena() + "\r\n";
+                
+            }
+            catch (Exception)
+            {
+
+                MetroFramework.MetroMessageBox.Show(this, "Recuerde completar todos los campos ", "Complete los campos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
             DataSet ds = GetLegajos();
-
-
             var result = from legajos in ds.Tables["legajos"].AsEnumerable()
                          select new
                          {
@@ -341,9 +360,11 @@ namespace LibroDeSueldosDigital
         public void TraerDatosPersona(int numero)
         {
             double valor = Convert.ToDouble(numero);
-            DataSet ds = GetLegajos();
+
+
+            DataSet ds = Legajos;
             var query = from legajos in ds.Tables["Legajos"].AsEnumerable()
-                        where legajos.Field<double>("legajo") == valor
+                        where legajos.Field<double>("legajo") == valor 
                         select new
                         {
                             Nlegajo = legajos[1],
@@ -353,17 +374,22 @@ namespace LibroDeSueldosDigital
                             Categoria = legajos[20],
                         };
 
-            
+
             DataSet ds2 = REC_CPO;
-            var query2 = from Conceptos in ds2.Tables["LEGAJOS"].AsEnumerable()
-                         where Conceptos.Field<double>("LEGAJO") == valor
+
+            var query2 = from legajos in ds2.Tables[0].AsEnumerable()
+                        where legajos.Field<double>("LEGAJO") == valor && legajos.Field<String>("LIQ") == comboBox4.Text
                          select new
-                         {
-                             legajo = Conceptos[1],
-                             otracosa = Conceptos[2],
-                             otracosa2= Conceptos[3],
-                             otracosa3=Conceptos[4],
-                         };
+                        {
+                            legajo = legajos[0],
+                            Recibo=legajos[1],
+                            Quincena = legajos[2],
+                            Concepto = legajos[3],
+                            Detalle = legajos[4],
+                            Unidad = legajos[5],
+                            Valor = legajos[6],
+                            Remuneracion = legajos[7]
+                        };
             foreach (var leg in query)
             {
                 Legajo_txt.Text = leg.Nlegajo.ToString();
@@ -372,7 +398,7 @@ namespace LibroDeSueldosDigital
                 direccion_txt.Text = leg.dire.ToString();
                 Ocupacion_txt.Text = leg.Categoria.ToString();
             }
-            dataGridView3.DataSource = query2;
+            dataGridView3.DataSource = query2.ToList();
         }
         private void ComboBox7_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -386,7 +412,15 @@ namespace LibroDeSueldosDigital
 
         private void MetroButton5_Click(object sender, EventArgs e)
         {
-            comboBox7.SelectedIndex = comboBox7.SelectedIndex - 1;
+            if (comboBox7.SelectedIndex>0)
+            {
+                comboBox7.SelectedIndex = comboBox7.SelectedIndex - 1;
+            }
+            else
+            {
+                MetroFramework.MetroMessageBox.Show(this, "No se puede ir mas atras");
+            }
+            
         }
 
         private void Direccion_txt_Click(object sender, EventArgs e)
@@ -394,23 +428,48 @@ namespace LibroDeSueldosDigital
 
         }
 
-        private void MetroButton8_Click(object sender, EventArgs e)
-        {
-            DataSet ds = GetConceptos();
-            
-            DataTable conceptos = ds.Tables["Conceptos"];
-            var query = from legajos in ds.Tables["LEGAJO"].AsEnumerable()
-                        where legajos.Field<double>("legajo") == 1
-                        select new
-                        {
-                            Nlegajo = legajos[1],
-                            nombre = legajos[2],
-                            cuil = legajos[6],
-                            dire = legajos[9],
-                            Categoria = legajos[20],
-                        };
+       
 
-            dataGridView3.DataSource = query;
+        private void MetroButton9_Click(object sender, EventArgs e)
+        {
+            Tbx_cuit.Text = "30506269845";
+            comboBox1.SelectedIndex = 1;
+            mes.Text = (11).ToString();
+            año.Text = (2019).ToString();
+            comboBox2.SelectedIndex = 1;
+            comboBox3.SelectedIndex = 1;
+        }
+
+        private void MetroButton7_Click_1(object sender, EventArgs e)
+        {
+            Registro2 Reg2 = new Registro2(Convert.ToInt64(CUIT_txt.Text), Convert.ToInt32(Legajo_txt.Text), metroDateTime1.Value.Year.ToString()+ metroDateTime1.Value.Month.ToString()+ metroDateTime1.Value.Day.ToString(), metroDateTime2.Value.Year.ToString() + metroDateTime2.Value.Month.ToString() + metroDateTime2.Value.Day.ToString());
+            TXT_Final.Text += Reg2.Cadena2;
+            label15.Text = Reg2.Cadena2.Length.ToString();
+        }
+
+        private void MetroDateTime2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ComboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox4.Text != "")
+            {
+                comboBox7.Enabled = true;
+                metroButton5.Enabled = true;
+                metroButton6.Enabled = true; 
+            }
+            else
+            {
+                MetroFramework.MetroMessageBox.Show(this, "Seleccione primero el periodo que va a liquidar pls ", "Recuerde...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
         }
     }
 }
