@@ -377,17 +377,16 @@ namespace LibroDeSueldosDigital
             DataSet ds2 = REC_CPO;
 
             var query2 = from legajos in ds2.Tables[0].AsEnumerable()
-                        where legajos.Field<double>("LEGAJO") == valor && legajos.Field<String>("LIQ") == comboBox4.Text
+                         where legajos.Field<double>("LEGAJO") == valor && legajos.Field<String>("LIQ") == comboBox4.Text
                          select new
-                        {
-                            legajo = legajos[0],
-                            Recibo=legajos[1],
-                            Quincena = legajos[2],
-                            Concepto = legajos[3],
-                            Detalle = legajos[4],
-                            Unidad = legajos[5],
-                            Valor = legajos[6],
-                            Remuneracion = legajos[7]
+                         {
+
+
+                             Concepto = legajos[3],//codigo de concepto
+                             Detalle = legajos[4],//detalle de concepto
+                             Unidad = legajos[5],//unidades de concepto
+                             Remuneracion = legajos[7],//remuneracion
+                            Descuento = legajos[8]//descuento
                         };
             foreach (var leg in query)
             {
@@ -397,15 +396,34 @@ namespace LibroDeSueldosDigital
                 direccion_txt.Text = leg.dire.ToString();
                 Ocupacion_txt.Text = leg.Categoria.ToString();
             }
-            //int fila = 1;
-            //int columna = 0;
-            //foreach (var concepto in query2)
-            //{
-            //    dataGridView3.Rows.Add();
-            //    dataGridView3.
-            //}
+            if (dataGridView3.Rows.Count > 0)
+            {
+                for(int i = 1; i == dataGridView3.Rows.Count; i++)
+                {
+                    dataGridView3.Rows.RemoveAt(i);
+                }
+            }
+            
+           
+            int fila = 0;
+            int columna = 0;
 
-            dataGridView3.DataSource = query2.ToList();
+            foreach (var concepto in query2)
+            {
+                dataGridView3.Rows.Add();
+                dataGridView3.Rows[fila].Cells[0].Value = CUIT_txt.Text;
+                dataGridView3.Rows[fila].Cells[1].Value = concepto.Concepto;
+                dataGridView3.Rows[fila].Cells[2].Value = concepto.Detalle;
+                dataGridView3.Rows[fila].Cells[3].Value = concepto.Unidad;
+                dataGridView3.Rows[fila].Cells[5].Value = concepto.Remuneracion;
+                dataGridView3.Rows[fila].Cells[6].Value = concepto.Descuento;
+                
+                fila++;
+
+            }
+            fila = 0;
+
+            
         }
         private void ComboBox7_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -477,6 +495,16 @@ namespace LibroDeSueldosDigital
                 MetroFramework.MetroMessageBox.Show(this, "Seleccione primero el periodo que va a liquidar pls ", "Recuerde...", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
+        }
+
+        private void MetroTabPage6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //dataGridView3.SelectedRows
         }
     }
 }

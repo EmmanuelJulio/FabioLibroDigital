@@ -8,7 +8,7 @@ namespace LibroDeSueldosDigital
 {
     class Registro1
     {
-        int CantLogn = 35;
+      
         string Cadena ="";
 
         string IdentificadorDeRegistro = "01";//2
