@@ -387,7 +387,7 @@ namespace LibroDeSueldosDigital
                             Concepto = legajos[3],
                             Detalle = legajos[4],
                             Unidad = legajos[5],
-                            Valor = legajos[6],
+                            Valor = Math.Abs((int)legajos[6]),
                             Remuneracion = legajos[7]
                         };
             foreach (var leg in query)
