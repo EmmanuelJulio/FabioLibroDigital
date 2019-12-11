@@ -86,6 +86,14 @@
             this.label10 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.Cuil = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CodigoConcepto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DetConcepto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Unidades = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descuentos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DebitoCredito = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.label12 = new System.Windows.Forms.Label();
             this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.metroButton6 = new MetroFramework.Controls.MetroButton();
@@ -106,14 +114,6 @@
             this.TXT_Final = new System.Windows.Forms.TextBox();
             this.Legajos = new System.Data.DataSet();
             this.REC_CPO = new System.Data.DataSet();
-            this.Cuil = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CodigoConcepto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DetConcepto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Unidades = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descuentos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DebitoCredito = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MetroTabControl.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
@@ -836,7 +836,7 @@
             this.dataGridView3.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView3.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.dataGridView3.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.dataGridView3.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -865,7 +865,7 @@
             dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.LightGray;
             dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView3.DefaultCellStyle = dataGridViewCellStyle17;
-            this.dataGridView3.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
+            this.dataGridView3.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dataGridView3.EnableHeadersVisualStyles = false;
             this.dataGridView3.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dataGridView3.ImeMode = System.Windows.Forms.ImeMode.Off;
@@ -879,6 +879,96 @@
             this.dataGridView3.Size = new System.Drawing.Size(1167, 318);
             this.dataGridView3.TabIndex = 61;
             this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView3_CellClick);
+            // 
+            // Cuil
+            // 
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.LightGray;
+            this.Cuil.DefaultCellStyle = dataGridViewCellStyle9;
+            this.Cuil.Frozen = true;
+            this.Cuil.HeaderText = "Cuil";
+            this.Cuil.Name = "Cuil";
+            // 
+            // CodigoConcepto
+            // 
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.CodigoConcepto.DefaultCellStyle = dataGridViewCellStyle10;
+            this.CodigoConcepto.Frozen = true;
+            this.CodigoConcepto.HeaderText = "Codigo de concepto";
+            this.CodigoConcepto.Name = "CodigoConcepto";
+            this.CodigoConcepto.Width = 200;
+            // 
+            // DetConcepto
+            // 
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.DetConcepto.DefaultCellStyle = dataGridViewCellStyle11;
+            this.DetConcepto.Frozen = true;
+            this.DetConcepto.HeaderText = "Detalle Concepto";
+            this.DetConcepto.Name = "DetConcepto";
+            this.DetConcepto.Width = 200;
+            // 
+            // Cantidad
+            // 
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Cantidad.DefaultCellStyle = dataGridViewCellStyle12;
+            this.Cantidad.Frozen = true;
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            // 
+            // Unidades
+            // 
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.LightGray;
+            this.Unidades.DefaultCellStyle = dataGridViewCellStyle13;
+            this.Unidades.Frozen = true;
+            this.Unidades.HeaderText = "Unidades";
+            this.Unidades.Items.AddRange(new object[] {
+            "Moneda",
+            "Porcentuales",
+            "Año",
+            "Quincena",
+            "Mes",
+            "Semanas",
+            "Dias",
+            "Horas"});
+            this.Unidades.Name = "Unidades";
+            this.Unidades.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Unidades.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // Importe
+            // 
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Importe.DefaultCellStyle = dataGridViewCellStyle14;
+            this.Importe.HeaderText = "Remunera";
+            this.Importe.Name = "Importe";
+            // 
+            // Descuentos
+            // 
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Descuentos.DefaultCellStyle = dataGridViewCellStyle15;
+            this.Descuentos.HeaderText = "Descuentos";
+            this.Descuentos.Name = "Descuentos";
+            // 
+            // DebitoCredito
+            // 
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
+            this.DebitoCredito.DefaultCellStyle = dataGridViewCellStyle16;
+            this.DebitoCredito.HeaderText = "Debito o Credito";
+            this.DebitoCredito.Items.AddRange(new object[] {
+            "Debito",
+            "Credito"});
+            this.DebitoCredito.Name = "DebitoCredito";
+            this.DebitoCredito.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.DebitoCredito.Width = 150;
             // 
             // label12
             // 
@@ -1114,96 +1204,6 @@
             // REC_CPO
             // 
             this.REC_CPO.DataSetName = "NewDataSet";
-            // 
-            // Cuil
-            // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.LightGray;
-            this.Cuil.DefaultCellStyle = dataGridViewCellStyle9;
-            this.Cuil.Frozen = true;
-            this.Cuil.HeaderText = "Cuil";
-            this.Cuil.Name = "Cuil";
-            // 
-            // CodigoConcepto
-            // 
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.CodigoConcepto.DefaultCellStyle = dataGridViewCellStyle10;
-            this.CodigoConcepto.Frozen = true;
-            this.CodigoConcepto.HeaderText = "Codigo de concepto";
-            this.CodigoConcepto.Name = "CodigoConcepto";
-            this.CodigoConcepto.Width = 200;
-            // 
-            // DetConcepto
-            // 
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.DetConcepto.DefaultCellStyle = dataGridViewCellStyle11;
-            this.DetConcepto.Frozen = true;
-            this.DetConcepto.HeaderText = "Detalle Concepto";
-            this.DetConcepto.Name = "DetConcepto";
-            this.DetConcepto.Width = 200;
-            // 
-            // Cantidad
-            // 
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Cantidad.DefaultCellStyle = dataGridViewCellStyle12;
-            this.Cantidad.Frozen = true;
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            // 
-            // Unidades
-            // 
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.LightGray;
-            this.Unidades.DefaultCellStyle = dataGridViewCellStyle13;
-            this.Unidades.Frozen = true;
-            this.Unidades.HeaderText = "Unidades";
-            this.Unidades.Items.AddRange(new object[] {
-            "Moneda",
-            "Porcentuales",
-            "Año",
-            "Quincena",
-            "Mes",
-            "Semanas",
-            "Dias",
-            "Horas"});
-            this.Unidades.Name = "Unidades";
-            this.Unidades.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Unidades.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // Importe
-            // 
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Importe.DefaultCellStyle = dataGridViewCellStyle14;
-            this.Importe.HeaderText = "Remunera";
-            this.Importe.Name = "Importe";
-            // 
-            // Descuentos
-            // 
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Descuentos.DefaultCellStyle = dataGridViewCellStyle15;
-            this.Descuentos.HeaderText = "Descuentos";
-            this.Descuentos.Name = "Descuentos";
-            // 
-            // DebitoCredito
-            // 
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
-            this.DebitoCredito.DefaultCellStyle = dataGridViewCellStyle16;
-            this.DebitoCredito.HeaderText = "Debito o Credito";
-            this.DebitoCredito.Items.AddRange(new object[] {
-            "Debito",
-            "Credito"});
-            this.DebitoCredito.Name = "DebitoCredito";
-            this.DebitoCredito.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.DebitoCredito.Width = 150;
             // 
             // pictureBox1
             // 

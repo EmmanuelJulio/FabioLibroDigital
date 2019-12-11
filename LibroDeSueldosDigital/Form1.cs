@@ -358,6 +358,12 @@ namespace LibroDeSueldosDigital
         }
         public void TraerDatosPersona(int numero)
         {
+            if (dataGridView3.Rows.Count > 0)
+            {
+                
+                dataGridView3.Rows.Clear();
+                dataGridView3.Refresh();
+            }
             double valor = Convert.ToDouble(numero);
 
 
@@ -396,18 +402,10 @@ namespace LibroDeSueldosDigital
                 direccion_txt.Text = leg.dire.ToString();
                 Ocupacion_txt.Text = leg.Categoria.ToString();
             }
-            if (dataGridView3.Rows.Count > 0)
-            {
-                for(int i = 1; i == dataGridView3.Rows.Count; i++)
-                {
-                    dataGridView3.Rows.RemoveAt(i);
-                }
-            }
+          
             
            
             int fila = 0;
-            int columna = 0;
-
             foreach (var concepto in query2)
             {
                 dataGridView3.Rows.Add();
@@ -417,7 +415,6 @@ namespace LibroDeSueldosDigital
                 dataGridView3.Rows[fila].Cells[3].Value = concepto.Unidad;
                 dataGridView3.Rows[fila].Cells[5].Value = concepto.Remuneracion;
                 dataGridView3.Rows[fila].Cells[6].Value = concepto.Descuento;
-                
                 fila++;
 
             }
@@ -470,6 +467,12 @@ namespace LibroDeSueldosDigital
             Registro2 Reg2 = new Registro2(Convert.ToInt64(CUIT_txt.Text), Convert.ToInt32(Legajo_txt.Text), metroDateTime1.Value.Year.ToString()+ metroDateTime1.Value.Month.ToString()+ metroDateTime1.Value.Day.ToString(), metroDateTime2.Value.Year.ToString() + metroDateTime2.Value.Month.ToString() + metroDateTime2.Value.Day.ToString());
             TXT_Final.Text += Reg2.Cadena2;
             label15.Text = Reg2.Cadena2.Length.ToString();
+            int fila = 1;
+            int Columna = 0;
+            foreach(DataRow Datos in dataGridView3.Rows)
+            {
+                Registro3 Reg3 = new Registro3(Datos.Field(fila,Columna,DataRowVersion.Current),)
+            }
         }
 
         private void MetroDateTime2_ValueChanged(object sender, EventArgs e)
@@ -504,7 +507,7 @@ namespace LibroDeSueldosDigital
 
         private void DataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //dataGridView3.SelectedRows
+          
         }
     }
 }
