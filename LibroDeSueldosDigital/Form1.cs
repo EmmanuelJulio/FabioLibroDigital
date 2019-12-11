@@ -469,9 +469,21 @@ namespace LibroDeSueldosDigital
             label15.Text = Reg2.Cadena2.Length.ToString();
             int fila = 1;
             int Columna = 0;
-            foreach(DataRow Datos in dataGridView3.Rows)
+            foreach(DataGridViewRow Datos in dataGridView3.Rows)
             {
-                Registro3 Reg3 = new Registro3(Datos.Field(fila,Columna,DataRowVersion.Current),)
+                int valor;
+                if(Convert.ToInt32(Datos.Cells["Importe"].Value) != 0)
+                {
+                     valor = Convert.ToInt32(Datos.Cells["Importe"].Value);
+                }
+                else
+                {
+                     valor = Math.Abs(Convert.ToInt32(Datos.Cells["Descuentos"].Value));
+                }
+               
+                Registro3 Reg3 = new Registro3(Convert.ToInt64(Datos.Cells["Cuil"].Value), Datos.Cells["CodigoConcepto"].Value.ToString(), Math.Abs(Convert.ToInt32(Datos.Cells["Cantidad"].Value.ToString())), Datos.Cells["Unidades"].Value.ToString(), Math.Abs(valor), Datos.Cells["DebitoCredito"].Value.ToString(), año.Text + mes.Text);
+                TXT_Final.Text += Reg3.Cadena3 + "\r\n";
+
             }
         }
 
