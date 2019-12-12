@@ -464,26 +464,41 @@ namespace LibroDeSueldosDigital
 
         private void MetroButton7_Click_1(object sender, EventArgs e)
         {
-            Registro2 Reg2 = new Registro2(Convert.ToInt64(CUIT_txt.Text), Convert.ToInt32(Legajo_txt.Text), metroDateTime1.Value.Year.ToString()+ metroDateTime1.Value.Month.ToString()+ metroDateTime1.Value.Day.ToString(), metroDateTime2.Value.Year.ToString() + metroDateTime2.Value.Month.ToString() + metroDateTime2.Value.Day.ToString());
-            TXT_Final.Text += Reg2.Cadena2;
-            label15.Text = Reg2.Cadena2.Length.ToString();
-            int fila = 1;
-            int Columna = 0;
-            foreach(DataGridViewRow Datos in dataGridView3.Rows)
+            try
             {
-                int valor;
-                if(Convert.ToInt32(Datos.Cells["Importe"].Value) != 0)
+                Registro2 Reg2 = new Registro2(Convert.ToInt64(CUIT_txt.Text), Convert.ToInt32(Legajo_txt.Text), metroDateTime1.Value.Year.ToString() + metroDateTime1.Value.Month.ToString() + metroDateTime1.Value.Day.ToString(), metroDateTime2.Value.Year.ToString() + metroDateTime2.Value.Month.ToString() + metroDateTime2.Value.Day.ToString());
+                TXT_Final.Text += Reg2.Cadena2;
+                label15.Text = Reg2.Cadena2.Length.ToString();
+                int fila = 1;
+                int Columna = 0;
+                foreach (DataGridViewRow Datos in dataGridView3.Rows)
                 {
-                     valor = Convert.ToInt32(Datos.Cells["Importe"].Value);
-                }
-                else
-                {
-                     valor = Math.Abs(Convert.ToInt32(Datos.Cells["Descuentos"].Value));
-                }
-               
-                Registro3 Reg3 = new Registro3(Convert.ToInt64(Datos.Cells["Cuil"].Value), Datos.Cells["CodigoConcepto"].Value.ToString(), Math.Abs(Convert.ToInt32(Datos.Cells["Cantidad"].Value.ToString())), Datos.Cells["Unidades"].Value.ToString(), Math.Abs(valor), Datos.Cells["DebitoCredito"].Value.ToString(), año.Text + mes.Text);
-                TXT_Final.Text += Reg3.Cadena3 + "\r\n";
+                    int valor;
+                    if (Convert.ToInt32(Datos.Cells["Importe"].Value) != 0)
+                    {
+                        valor = Convert.ToInt32(Datos.Cells["Importe"].Value);
+                    }
+                    else
+                    {
+                        valor = Math.Abs(Convert.ToInt32(Datos.Cells["Descuentos"].Value));
+                    }
 
+                    Registro3 Reg3 = new Registro3(Convert.ToInt64(Datos.Cells["Cuil"].Value), Datos.Cells["CodigoConcepto"].Value.ToString(), Math.Abs(Convert.ToInt32(Datos.Cells["Cantidad"].Value.ToString())), Datos.Cells["Unidades"].Value.ToString(), Math.Abs(valor), Datos.Cells["DebitoCredito"].Value.ToString(), año.Text + mes.Text);
+                    TXT_Final.Text += Reg3.Cadena3 + "\r\n";
+
+
+                }
+                MetroFramework.MetroMessageBox.Show(this, "Reguistro de " + Nombre_TXT.Text + " Fue procesado exitosamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                comboBox7.SelectedIndex += 1;
+                while (dataGridView3.Rows.Count == 0)
+                {
+                    comboBox7.SelectedIndex += 1;
+                }
+            }
+            catch (Exception er)
+            {
+
+                MetroFramework.MetroMessageBox.Show(this, "Reguistro de " + Nombre_TXT.Text + "No fue procesado Error: "+er.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
