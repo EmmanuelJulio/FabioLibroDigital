@@ -142,7 +142,7 @@
             this.MetroTabControl.Controls.Add(this.metroTabPage3);
             this.MetroTabControl.Location = new System.Drawing.Point(23, 63);
             this.MetroTabControl.Name = "MetroTabControl";
-            this.MetroTabControl.SelectedIndex = 1;
+            this.MetroTabControl.SelectedIndex = 0;
             this.MetroTabControl.Size = new System.Drawing.Size(1199, 560);
             this.MetroTabControl.Style = MetroFramework.MetroColorStyle.Black;
             this.MetroTabControl.TabIndex = 1;
@@ -1207,10 +1207,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1068, 48);
+            this.pictureBox1.Image = global::LibroDeSueldosDigital.Properties.Resources.NUEVO_GIF;
+            this.pictureBox1.Location = new System.Drawing.Point(1168, 45);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 47);
+            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
