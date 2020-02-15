@@ -296,7 +296,22 @@ namespace LibroDeSueldosDigital
             {
                 Registro1 Reg = new Registro1(Tbx_cuit.Text, comboBox1.SelectedItem.ToString(), año.Text + mes.Text, comboBox2.SelectedItem.ToString(), comboBox3.SelectedItem.ToString());
                 TXT_Final.Text += Reg.VerCadena() + "\r\n";
-                
+                DataSet ds = GetLegajos();
+                var result = from legajos in ds.Tables["legajos"].AsEnumerable()
+                             select new
+                             {
+                                 Nlegajo = legajos[1]
+                             };
+
+                foreach (var p in result)
+                {
+
+                    //ListaLegajos.Add(Convert.ToInt32(p.Nlegajo));
+                    comboBox7.Items.Add(p.Nlegajo);
+                }
+                metroTabControl2.SelectedTab = metroTabControl2.TabPages[1];
+
+
             }
             catch (Exception)
             {
@@ -304,21 +319,7 @@ namespace LibroDeSueldosDigital
                 MetroFramework.MetroMessageBox.Show(this, "Recuerde completar todos los campos ", "Complete los campos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            DataSet ds = GetLegajos();
-            var result = from legajos in ds.Tables["legajos"].AsEnumerable()
-                         select new
-                         {
-                             Nlegajo = legajos[1]
-                         };
-
-            foreach (var p in result)
-            {
-
-                //ListaLegajos.Add(Convert.ToInt32(p.Nlegajo));
-                comboBox7.Items.Add(p.Nlegajo);
-            }
-            metroTabControl2.SelectedTab = metroTabControl2.TabPages[1];
-
+           
 
         }
         DataSet GetLegajos()
@@ -494,12 +495,14 @@ namespace LibroDeSueldosDigital
                 {
                     comboBox7.SelectedIndex += 1;
                 }
+                metroTabControl2.SelectedTab = metroTabControl2.TabPages[2];
             }
             catch (Exception er)
             {
 
                 MetroFramework.MetroMessageBox.Show(this, "Reguistro de " + Nombre_TXT.Text + "No fue procesado Error: "+er.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
         }
 
         private void MetroDateTime2_ValueChanged(object sender, EventArgs e)
@@ -535,6 +538,26 @@ namespace LibroDeSueldosDigital
         private void DataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
         {
           
+        }
+
+        private void MetroTabPage7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void MetroTextBox19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label45_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
