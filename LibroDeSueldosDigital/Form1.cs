@@ -559,5 +559,210 @@ namespace LibroDeSueldosDigital
         {
 
         }
+
+        private void MetroTextBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MetroTextBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MetroTextBox7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MetroTextBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MetroTextBox18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MetroTextBox15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MetroTextBox16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MetroTextBox13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MetroTextBox14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MetroTextBox11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MetroTextBox12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MetroTextBox9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MetroTextBox10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MetroTextBox8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MetroTextBox6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MetroTextBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MetroTextBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MetroTextBox20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label39_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label44_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label46_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label55_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label54_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label53_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label49_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label48_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label47_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label56_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label50_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label51_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label52_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label41_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label42_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label43_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label37_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label38_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label40_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label60_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label57_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label58_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label59_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
