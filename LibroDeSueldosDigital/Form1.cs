@@ -530,239 +530,107 @@ namespace LibroDeSueldosDigital
 
         }
 
-        private void MetroTabPage6_Click(object sender, EventArgs e)
+        private void metroButton4_Click_1(object sender, EventArgs e)
         {
+            Registro4 reg4 = new Registro4();
+            reg4.Cuil = r2.Text;
+            reg4.Conyugue = r3.Text;
+            reg4.CantHijos = r4.Text;
+            reg4.MarcaCCT1 = r5.Text;
+            reg4.MarcaSCVO1 = r6.Text;
+            reg4.MarcaCorrespondeReduccion1 = r6.Text;
+            reg4.TipoEmpresa1 = r7.Text;
+            reg4.TipoOperacion1 = r8.Text;
+            reg4.CodigoSituacion1 = r9.Text;
+            reg4.CodigoCondicion1 = r10.Text;
+            reg4.CodigoActividad1 = r11.Text;
+            reg4.CodigoModalidadDeContratacion1 = r12.Text;
+            reg4.CodigoSiniestrado1 = r13.Text;
+            reg4.CodigoDeLocalidad1 = r14.Text;
+            reg4.SituacionDeRevista11 = r15.Text;
+            reg4.DiaInicioSituacionDeRevista11 = r16.Text;
+            reg4.SituacionDeRevista21 = r17.Text;
+            reg4.DiaInicioSituacionDeRevista21 = r18.Text;
+            reg4.SituacionDeRevista31 = r19.Text;
+            reg4.DiaInicioSituacionDeRevista31 = r20.Text;
+            reg4.CantDiasTrabajados1 = r21.Text;
+            reg4.HorasTrabajadas1 = r22.Text;
+            reg4.Porcentajeaporteadiccionalss = r23.Text;
+            reg4.Contribuciondiferencial = r24.Text;
+            reg4.Codigoobrasocial1 = r25.Text;
+            reg4.Cantidadahderentes = r26.Text;
+            reg4.AporteadicionalOs = r27.Text;
+            reg4.ContribucionadicionalOS = r28.Text;
+            reg4.BasecalculodiferencialaportesOSyFSR1 = r29.Text;
+            reg4.BaseCalculoDiferencialLRT1 = r30.Text;
+            reg4.RemuneracionMaternidadANSES1 = r31.Text;
+            reg4.RemuneracionBruta1 = r32.Text;
+            reg4.BaseImponible11 = r33.Text;
+            reg4.BaseImponible21 = r34.Text;
+            reg4.BaseImponible31 = r35.Text;
+            reg4.BaseImponible41 = r36.Text;
+            reg4.BaseImponible51 = r37.Text;
+            reg4.BaseImponible61 = r38.Text;
+            reg4.BaseImponible71 = r39.Text;
+            reg4.BaseImponible81 = r40.Text;
+            reg4.BaseImponible91 = r41.Text;
+            reg4.BaseParaElcalculodifdeaportesDeSegSocial1 = r42.Text;
+            reg4.BaseParaElcalculodifDeContribucionesDeSegSocial1 = r43.Text;
+            reg4.BaseImponible101 = r44.Text;
+            reg4.ImporteAdetraer1 = r45.Text;
+            reg4.CrearCadena();
+            label61.Text = reg4.Cadena04;
 
         }
 
-        private void DataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void metroButton8_Click(object sender, EventArgs e)
         {
-          
-        }
-
-        private void MetroTabPage7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void MetroTextBox19_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label45_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MetroTextBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MetroTextBox5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MetroTextBox7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MetroTextBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MetroTextBox18_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MetroTextBox15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MetroTextBox16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MetroTextBox13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MetroTextBox14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MetroTextBox11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MetroTextBox12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MetroTextBox9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MetroTextBox10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MetroTextBox8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MetroTextBox6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MetroTextBox4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MetroTextBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MetroTextBox20_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label39_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label44_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label46_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label55_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label54_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label53_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label49_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label48_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label47_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label56_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label50_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label51_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label52_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label41_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label42_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label43_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label37_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label38_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label40_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label60_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label57_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label58_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label59_Click(object sender, EventArgs e)
-        {
-
+            r2.Text ="1";
+            r3.Text = "2";
+            r4.Text = "3";
+            r5.Text = "4";
+            r6.Text = "5";
+            r6.Text = "6";
+            r7.Text = "7";
+            r8.Text = "8";
+            r9.Text = "9";
+            r10.Text = "10";
+            r11.Text = "11";
+            r12.Text = "12";
+            r13.Text = "13";
+            r14.Text = "14";
+            r15.Text = "15";
+            r16.Text = "16";
+            r17.Text = "17";
+            r18.Text = "18";
+            r19.Text = "19";
+            r20.Text = "20";
+            r21.Text = "21";
+            r22.Text = "22";
+            r23.Text = "23";
+            r24.Text = "24";
+            r25.Text = "25";
+            r26.Text = "26";
+            r27.Text = "27";
+            r28.Text = "28";
+            r29.Text = "29";
+            r30.Text = "30";
+            r31.Text = "31";
+            r32.Text = "32";
+            r33.Text = "33";
+            r34.Text = "34";
+            r35.Text = "35";
+            r36.Text = "36";
+            r37.Text = "37";
+            r38.Text = "38";
+            r39.Text = "39";
+            r40.Text="40";
+            r41.Text = "41";
+            r42.Text = "42";
+            r43.Text = "43";
+            r44.Text = "44";
+            r45.Text = "45";
         }
     }
 }
+
